@@ -16,8 +16,9 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
-// Static directory
-app.use(express.static("app/public"));
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
 
 // Override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));

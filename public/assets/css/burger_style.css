@@ -1,0 +1,28 @@
+body {
+    background-color: #f1c40f !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.burgerPic {
+    width: 8%;
+    padding-top: 5%;
+}
+
+h1 {
+    color: red;
+}
+
+.burgerHeading {
+    text-align: center;
+}
+
+.burgerText {
+    text-align: center;
+}
+
+.subButton {
+    background-color: #2980b9;
+    color: #fff;
+}
