@@ -31,6 +31,8 @@ h1 {
 
 .burger-devoured {
     border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
     -webkit-box-shadow: 5px 4px 15px 1px rgba(0,0,0,0.59);
     box-shadow: 5px 4px 15px 1px rgba(0,0,0,0.59);
     background-color: #f2f2f2;
