@@ -22,7 +22,44 @@ h1 {
     text-align: center;
 }
 
-.subButton {
-    background-color: #2980b9;
+.burger-row {
+    text-align: center;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.burger-devoured {
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 4px 15px 1px rgba(0,0,0,0.59);
+    box-shadow: 5px 4px 15px 1px rgba(0,0,0,0.59);
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-right: 10px;
+    background: palevioletred;
     color: #fff;
 }
+
+.devour-burger {
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 4px 15px 1px rgba(0,0,0,0.59);
+    box-shadow: 5px 4px 15px 1px rgba(0,0,0,0.59);
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-right: 10px;
+    background: navy;
+    color: #fff;
+
+}
+
+.burgerInput {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+

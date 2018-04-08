@@ -2,16 +2,46 @@
 
     <div class="row">
         <div class="col-lg-12 burgerHeading">
-            <img src="https://cdn.pixabay.com/photo/2018/02/26/21/44/hamburger-3184108_960_720.png" class="burgerPic">
+            <img src="https://s3.amazonaws.com/images-pixabay/hamburger-3184108_960_720.png" class="burgerPic">
             <h1>Eat-Da-Burger!</h1>
+        </div>
+    </div>
+
+    <div class="row burger-row">
+        <div class="col-md-6">
+            {{#each burgers}}
+                {{#unless this.devoured}}
+                    <div>
+                        <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
+                            <label class='devour-burger'>{{this.burger_name}}</label>
+                            <button type="submit" class="btn btn-default" id="devour-button">Devour It!</button>
+                        </form>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-md-6">
+            {{#each burgers}}
+                {{#if this.devoured}}
+                    <form>
+                    <label class='burger-devoured'>
+                            {{this.id}}. {{this.burger_name}}, has been devoured!
+                    </label>
+                    </form>
+                {{/if}}
+            {{/each}}
+
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-12 burgerText">
-            <textarea rows="4" cols="50"></textarea><br>
-            <input type="submit" class="subButton"><br><br>
+            <form action="/api/burgers" method="POST">
+                <input type="text" id="name" name="burger_name" class="burgerInput" placeholder="Delicious burger goes here!"><br><br>
+                <button type="submit" class="btn btn-default btn-primary">Submit</button><br><br>
+            </form>
             <p>Enter a burger you want to eat. Click the "Submit" button.</p>
+
         </div>
     </div>
 </div>
